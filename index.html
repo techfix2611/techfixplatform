@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix Solutions | Desarrollo de Software & Soporte IT</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darker: '#030712',
+                        dark: '#0b0f19',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(99, 102, 241, 0.15);
+        }
+        .card-glow:hover {
+            box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-darker text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-darker/80 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo de la Marca (Reemplaza img/logo.png con tu archivo de logo) -->
+            <a href="#inicio" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-400 p-0.5 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform overflow-hidden">
+                    <img src="img/logo.png" alt="TechFix Solutions Logo" class="w-full h-full object-contain rounded-[10px] bg-slate-950" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hidden w-full h-full items-center justify-center text-white font-black text-xl">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-tight text-white">TechFix<span class="text-cyan-400">.</span></span>
+                    <span class="text-xs text-slate-400 font-medium">Software & IT Support</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-7 text-sm font-medium">
+                <a href="#inicio" class="text-slate-300 hover:text-cyan-400 transition-colors">Inicio</a>
+                <a href="#nosotros" class="text-slate-300 hover:text-cyan-400 transition-colors">Nuestro Enfoque</a>
+                <a href="#soluciones" class="text-slate-300 hover:text-cyan-400 transition-colors">Soluciones</a>
+                <a href="#proyectos" class="text-slate-300 hover:text-cyan-400 transition-colors">Trabajos Realizados</a>
+                <a href="#contacto" class="text-slate-300 hover:text-cyan-400 transition-colors">Socios y Contacto</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#contacto" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                    Diagnóstico Gratuito
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Inicio</a>
+            <a href="#nosotros" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Nuestro Enfoque</a>
+            <a href="#soluciones" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Soluciones</a>
+            <a href="#proyectos" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Trabajos Realizados</a>
+            <a href="#contacto" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Socios y Contacto</a>
+            <div class="pt-2">
+                <a href="#contacto" class="w-full text-center block px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-semibold text-sm">
+                    Diagnóstico Gratuito
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-8 glow-effect">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span>Estudio Ágil de Desarrollo & Soporte IT</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-[1.1] mb-6">
+                Impulsamos tu negocio con <span class="bg-gradient-to-r from-indigo-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">soluciones tecnológicas ágiles</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-normal">
+                Optimizamos procesos, automatizamos tareas repetitivas y facilitamos el trabajo diario de empresas, negocios y emprendimientos con tecnología moderna y soporte directo.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#soluciones" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-semibold shadow-xl shadow-indigo-600/25 hover:shadow-indigo-600/40 hover:scale-105 transition-all text-center">
+                    Explorar Soluciones <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+                <a href="#proyectos" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-semibold hover:bg-slate-800 hover:text-white transition-all text-center">
+                    Ver Trabajos Realizados
+                </a>
+            </div>
+
+            <!-- Value Pillars Bar -->
+            <div class="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto border-t border-slate-800/80 pt-10 text-left">
+                <div class="p-5 rounded-2xl bg-slate-900/50 backdrop-blur border border-slate-800/60 flex items-start space-x-4">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div>
+                        <div class="text-sm font-bold text-white mb-1">Atención Directa sin Intermediarios</div>
+                        <div class="text-xs text-slate-400 leading-relaxed">Tratas directamente con los desarrolladores y técnicos que construyen tu solución.</div>
+                    </div>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-900/50 backdrop-blur border border-slate-800/60 flex items-start space-x-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <div>
+                        <div class="text-sm font-bold text-white mb-1">Soluciones a Medida y Escalables</div>
+                        <div class="text-xs text-slate-400 leading-relaxed">Herramientas adaptadas exactamente a lo que tu negocio necesita hoy, listas para crecer mañana.</div>
+                    </div>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-900/50 backdrop-blur border border-slate-800/60 flex items-start space-x-4">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <div class="text-sm font-bold text-white mb-1">Optimización de Costos y Tiempos</div>
+                        <div class="text-xs text-slate-400 leading-relaxed">Eliminamos cuellos de botella y tareas manuales para que aproveches cada hora y recurso.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros Section -->
+    <section id="nosotros" class="py-24 bg-dark relative border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-400 text-xs font-semibold uppercase tracking-wider">
+                        Nuestro Enfoque
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                        Tecnología práctica para <span class="text-indigo-400">facilitar el trabajo diario</span> de tu negocio
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed">
+                        Somos un estudio tecnológico joven y ágil nacido con una meta clara: <strong>ayudar a emprendimientos, comercios y empresas en crecimiento a trabajar mejor</strong>. Sabemos que muchas veces las herramientas genéricas son costosas o complejas, y los procesos manuales frenan tu avance.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed text-sm">
+                        Por eso combinamos desarrollo de software moderno con soporte técnico cercano. Analizamos cómo opera tu negocio, detectamos dónde se pierde tiempo o dinero y construimos exactamente la herramienta o el respaldo técnico que necesitas para operar sin interrupciones.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-wrench text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-white text-sm mb-1">Soporte Cercano y Ágil</h3>
+                                <p class="text-xs text-slate-400">Mantenimiento preventivo, optimización de equipos y respuesta rápida cuando más lo necesitas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                            <div class="w-10 h-10 rounded-lg bg-cyan-600/20 text-cyan-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-gears text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-white text-sm mb-1">Automatización Real</h3>
+                                <p class="text-xs text-slate-400">Convertimos hojas de cálculo desordenadas y tareas repetitivas en sistemas rápidos y claros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 relative">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-20 blur-xl"></div>
+                    <div class="relative rounded-2xl bg-slate-900 border border-slate-800 p-8 shadow-2xl space-y-6">
+                        <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <span class="text-xs text-slate-500 font-mono">optimizacion-negocio.js</span>
+                        </div>
+
+                        <div class="font-mono text-xs sm:text-sm text-slate-300 space-y-2">
+                            <p class="text-indigo-400">// Cómo transformamos tu flujo de trabajo</p>
+                            <p><span class="text-cyan-400">const</span> objetivo = <span class="text-amber-300">"Facilitar tu operación diaria"</span>;</p>
+                            <p><span class="text-cyan-400">const</span> tecnologias = [<span class="text-emerald-300">"Python"</span>, <span class="text-emerald-300">"Node.js"</span>, <span class="text-emerald-300">"Java"</span>, <span class="text-emerald-300">"HTML/JS"</span>];</p>
+                            <p><span class="text-cyan-400">const</span> tratoDirecto = <span class="text-purple-400">true</span>;</p>
+                            <br>
+                            <p class="text-slate-500">// Analizando mejoras para tu empresa...</p>
+                            <p class="text-emerald-400">✔ Menos tiempo en tareas manuales</p>
+                            <p class="text-emerald-400">✔ Control claro de ventas e inventario</p>
+                            <p class="text-emerald-400">✔ Equipos y redes funcionando sin fallos</p>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                            <span>Enfoque: <span class="text-cyan-400 font-semibold">PyMEs & Emprendimientos</span></span>
+                            <span class="font-mono text-indigo-400">100% Personalizado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soluciones y Capacidades Section -->
+    <section id="soluciones" class="py-24 bg-darker relative border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                    Catálogo de Capacidades
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    Soluciones Listas para <span class="text-cyan-400">Implementar en tu Negocio</span>
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Explora lo que podemos construir y resolver por ti. Filtra por área de necesidad o por el lenguaje y tecnología que prefieras.
+                </p>
+
+                <!-- Filter Controls: Category & Technology -->
+                <div class="mt-8 space-y-4">
+                    <!-- Category Filters -->
+                    <div>
+                        <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-2">Filtrar por Área / Solución</span>
+                        <div class="flex flex-wrap items-center justify-center gap-2">
+                            <button onclick="setCategoryFilter('all')" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-600 text-white transition-all shadow-lg shadow-indigo-600/20" data-cat="all">
+                                Todas las Áreas
+                            </button>
+                            <button onclick="setCategoryFilter('soporte')" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white transition-all" data-cat="soporte">
+                                Soporte Técnico
+                            </button>
+                            <button onclick="setCategoryFilter('escritorio')" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white transition-all" data-cat="escritorio">
+                                Escritorio & Inventario
+                            </button>
+                            <button onclick="setCategoryFilter('web')" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white transition-all" data-cat="web">
+                                Landing & E-commerce
+                            </button>
+                            <button onclick="setCategoryFilter('automatizacion')" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white transition-all" data-cat="automatizacion">
+                                Chatbots & Scripts
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Technology Filters -->
+                    <div>
+                        <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-2">Filtrar por Tecnología / Lenguaje</span>
+                        <div class="flex flex-wrap items-center justify-center gap-2">
+                            <button onclick="setTechFilter('all')" class="tech-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-cyan-500/20 border border-cyan-500/50 text-cyan-300 transition-all" data-tech="all">
+                                Todas
+                            </button>
+                            <button onclick="setTechFilter('python')" class="tech-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all" data-tech="python">
+                                <i class="fa-brands fa-python mr-1 text-amber-400"></i> Python
+                            </button>
+                            <button onclick="setTechFilter('nodejs')" class="tech-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all" data-tech="nodejs">
+                                <i class="fa-brands fa-node-js mr-1 text-emerald-400"></i> Node.js
+                            </button>
+                            <button onclick="setTechFilter('java')" class="tech-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all" data-tech="java">
+                                <i class="fa-brands fa-java mr-1 text-red-400"></i> Java
+                            </button>
+                            <button onclick="setTechFilter('html')" class="tech-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all" data-tech="html">
+                                <i class="fa-brands fa-html5 mr-1 text-orange-400"></i> HTML / CSS / JS
+                            </button>
+                            <button onclick="setTechFilter('infraestructura')" class="tech-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all" data-tech="infraestructura">
+                                <i class="fa-solid fa-server mr-1 text-blue-400"></i> Redes & Sistemas
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Filter Message -->
+            <div id="no-results" class="hidden text-center py-12 px-4 rounded-2xl bg-slate-900/50 border border-slate-800 max-w-lg mx-auto mb-8">
+                <i class="fa-solid fa-filter-circle-xmark text-3xl text-slate-500 mb-3"></i>
+                <p class="text-slate-300 font-medium text-sm mb-3">No hay soluciones exactas con esa combinación de filtros.</p>
+                <button onclick="resetFilters()" class="px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-500 transition-colors">
+                    Mostrar todas las soluciones
+                </button>
+            </div>
+
+            <!-- Cards Grid -->
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Soporte Técnico -->
+                <div class="service-card group rounded-2xl bg-slate-900/80 border border-slate-800 p-6 flex flex-col justify-between card-glow transition-all duration-300" data-category="soporte" data-tech="infraestructura">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-blue-950/80 border border-blue-800/50 text-blue-300 text-[11px] font-semibold">Soporte Técnico</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Mantenimiento y Soporte IT</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Mantenemos tus computadoras, redes y sistemas operativos rápidos y seguros mediante mantenimiento preventivo, limpieza de software y resolución ágil de fallos.
+                        </p>
+                        <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 mb-5">
+                            <p class="text-xs text-cyan-300 font-medium"><i class="fa-solid fa-check-circle mr-1.5"></i>Beneficio: Evita paralizaciones operativas y alarga la vida útil de tus equipos.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium">Windows / Linux</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium">Redes & Wi-Fi</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium">Respaldo de Datos</span>
+                        </div>
+                        <a href="#contacto" class="inline-flex items-center text-sm font-semibold text-cyan-400 group-hover:text-cyan-300">
+                            Consultar implementación <i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Programas de Escritorio -->
+                <div class="service-card group rounded-2xl bg-slate-900/80 border border-slate-800 p-6 flex flex-col justify-between card-glow transition-all duration-300" data-category="escritorio" data-tech="python java">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-desktop"></i>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-indigo-950/80 border border-indigo-800/50 text-indigo-300 text-[11px] font-semibold">Escritorio</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Programas de Escritorio a Medida</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Creamos aplicaciones rápidas para Windows o Linux ideales para puntos de venta (POS), registro de clientes, cotizaciones y control administrativo sin depender de internet.
+                        </p>
+                        <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 mb-5">
+                            <p class="text-xs text-cyan-300 font-medium"><i class="fa-solid fa-check-circle mr-1.5"></i>Beneficio: Agiliza la atención en caja y organiza tus registros sin cuotas mensuales.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-amber-300 text-xs font-medium">Python</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-red-300 text-xs font-medium">Java</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium">SQLite / MySQL</span>
+                        </div>
+                        <a href="#contacto" class="inline-flex items-center text-sm font-semibold text-cyan-400 group-hover:text-cyan-300">
+                            Consultar implementación <i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Gestión de Inventario -->
+                <div class="service-card group rounded-2xl bg-slate-900/80 border border-slate-800 p-6 flex flex-col justify-between card-glow transition-all duration-300" data-category="escritorio" data-tech="python nodejs html">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-800/50 text-emerald-300 text-[11px] font-semibold">Inventario</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Gestión de Inventario y Control</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Sistemas claros y fáciles de usar para controlar entradas, salidas, alertas de stock bajo y reportes de ventas desde tu computadora o teléfono.
+                        </p>
+                        <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 mb-5">
+                            <p class="text-xs text-cyan-300 font-medium"><i class="fa-solid fa-check-circle mr-1.5"></i>Beneficio: Elimina pérdidas de mercancía y olvídate del desorden en hojas de Excel.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 text-xs font-medium">Node.js</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-amber-300 text-xs font-medium">Python</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-orange-300 text-xs font-medium">HTML / JS</span>
+                        </div>
+                        <a href="#contacto" class="inline-flex items-center text-sm font-semibold text-cyan-400 group-hover:text-cyan-300">
+                            Consultar implementación <i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Landing Page -->
+                <div class="service-card group rounded-2xl bg-slate-900/80 border border-slate-800 p-6 flex flex-col justify-between card-glow transition-all duration-300" data-category="web" data-tech="html">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/50 text-cyan-300 text-[11px] font-semibold">Landing Page</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Landing Pages Profesionales</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Páginas web modernas, veloces y adaptadas a celulares diseñadas para presentar tus servicios con credibilidad y convertir visitantes en clientes por WhatsApp o formulario.
+                        </p>
+                        <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 mb-5">
+                            <p class="text-xs text-cyan-300 font-medium"><i class="fa-solid fa-check-circle mr-1.5"></i>Beneficio: Proyecta confianza profesional desde el primer día y capta más clientes.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-orange-300 text-xs font-medium">HTML5 / CSS3</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-yellow-300 text-xs font-medium">JavaScript</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-cyan-300 text-xs font-medium">Tailwind CSS</span>
+                        </div>
+                        <a href="#contacto" class="inline-flex items-center text-sm font-semibold text-cyan-400 group-hover:text-cyan-300">
+                            Consultar implementación <i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: E-commerce -->
+                <div class="service-card group rounded-2xl bg-slate-900/80 border border-slate-800 p-6 flex flex-col justify-between card-glow transition-all duration-300" data-category="web" data-tech="nodejs html">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-800/50 text-purple-300 text-[11px] font-semibold">E-commerce</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Catálogos Web y Tiendas Online</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Tiendas virtuales autoadministrables con carrito de compras, gestión de precios, variantes de productos y cierre de pedidos directo a WhatsApp o pasarela de pago.
+                        </p>
+                        <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 mb-5">
+                            <p class="text-xs text-cyan-300 font-medium"><i class="fa-solid fa-check-circle mr-1.5"></i>Beneficio: Vende las 24 horas sin responder manualmente cada precio por chat.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 text-xs font-medium">Node.js</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-orange-300 text-xs font-medium">HTML / JS</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-purple-300 text-xs font-medium">Base de Datos</span>
+                        </div>
+                        <a href="#contacto" class="inline-flex items-center text-sm font-semibold text-cyan-400 group-hover:text-cyan-300">
+                            Consultar implementación <i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Chatbot & Automatización -->
+                <div class="service-card group rounded-2xl bg-slate-900/80 border border-slate-800 p-6 flex flex-col justify-between card-glow transition-all duration-300" data-category="automatizacion" data-tech="python nodejs">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-amber-600/20 text-amber-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-amber-950/80 border border-amber-800/50 text-amber-300 text-[11px] font-semibold">Automatización</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Chatbots y Scripts de Automatización</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Bots de atención automática para preguntas frecuentes y scripts en Python que automatizan generación de reportes, envío de correos y procesamiento de archivos.
+                        </p>
+                        <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 mb-5">
+                            <p class="text-xs text-cyan-300 font-medium"><i class="fa-solid fa-check-circle mr-1.5"></i>Beneficio: Ahorra horas semanales en tareas repetitivas y responde al instante.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-amber-300 text-xs font-medium">Python</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 text-xs font-medium">Node.js</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-cyan-300 text-xs font-medium">APIs & Bots</span>
+                        </div>
+                        <a href="#contacto" class="inline-flex items-center text-sm font-semibold text-cyan-400 group-hover:text-cyan-300">
+                            Consultar implementación <i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: Algunos de Nuestros Trabajos (4 Proyectos) -->
+    <section id="proyectos" class="py-24 bg-dark relative border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-800/50 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                    Portafolio & Casos Reales
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    Algunos de <span class="text-emerald-400">Nuestros Trabajos</span>
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Conoce ejemplos reales de sistemas, catálogos y optimizaciones que hemos desarrollado. Haz clic en cada proyecto para ver sus imágenes y detalles técnicos.
+                </p>
+            </div>
+
+            <!-- Grid de 4 Proyectos (2 columnas en escritorio para que luzcan amplios y ordenados) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Proyecto 1: Sistema para Comedores -->
+                <div class="group rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden flex flex-col justify-between card-glow transition-all duration-300">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-slate-950">
+                            <!-- Reemplaza src="img/comedor-1.png" por la captura principal de tu sistema de comedores -->
+                            <img src="img/comedor-2.png" onerror="this.src='https://placehold.co/800x450/0f172a/38bdf8?text=Sistema+de+Comedores+%26+Recetas'" alt="Sistema de Gestión para Comedores" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur border border-slate-700 text-cyan-400 text-xs font-semibold">
+                                Escritorio & Inventario
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Sistema de Gestión de Comedores y Recetas</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Permite crear recetas vinculadas a los insumos del inventario. Al indicar la cantidad de platos a servir, calcula y descuenta automáticamente los ingredientes consumidos para mantener un control exacto.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <button onclick="openProjectModal(0)" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-indigo-600 text-white font-semibold text-sm flex items-center justify-center space-x-2 transition-all cursor-pointer">
+                            <i class="fa-regular fa-images"></i>
+                            <span>Ver Galería y Detalles</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Catálogo Web de Perfumes -->
+                <div class="group rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden flex flex-col justify-between card-glow transition-all duration-300">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-slate-950">
+                            <!-- Reemplaza src="img/perfumes-1.png" por la captura principal de tu catálogo de perfumes -->
+                            <img src="img/perfumes-1.png" onerror="this.src='https://placehold.co/800x450/0f172a/818cf8?text=Catalogo+Perfumes+%2B+Calculadora+Delivery'" alt="Catálogo Web de Perfumes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur border border-slate-700 text-indigo-400 text-xs font-semibold">
+                                E-commerce & Catálogo Web
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Catálogo Interactivo de Perfumes y Delivery</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Tienda catálogo con filtros rápidos, conversión automática a bolívares según la tasa del día (Dólar o Euro) y calculadora integrada para estimar el costo del delivery según la zona.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <button onclick="openProjectModal(1)" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-indigo-600 text-white font-semibold text-sm flex items-center justify-center space-x-2 transition-all cursor-pointer">
+                            <i class="fa-regular fa-images"></i>
+                            <span>Ver Galería y Detalles</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Soporte & Automatización -->
+<div class="group rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden flex flex-col justify-between card-glow transition-all duration-300">
+    <div>
+        <div class="relative h-56 overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Mantenimiento de hardware y sistema operativo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur border border-slate-700 text-emerald-400 text-xs font-semibold">
+                Soporte IT & Automatización
+            </span>
+        </div>
+        <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Optimización de Hardware, Sistema Operativo y Respaldos</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Limpieza y mantenimiento preventivo de hardware, optimización del sistema operativo y automatización de tareas y respaldos para mantener los equipos estables.
+            </p>
+        </div>
+    </div>
+    <div class="px-6 pb-6">
+        <button onclick="openProjectModal(2)" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-indigo-600 text-white font-semibold text-sm flex items-center justify-center space-x-2 transition-all cursor-pointer">
+            <i class="fa-regular fa-images"></i>
+            <span>Ver Galería y Detalles</span>
+        </button>
+    </div>
+</div>
+
+                <!-- Proyecto 4: Control de Acceso y Visitantes -->
+                <div class="group rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden flex flex-col justify-between card-glow transition-all duration-300">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-slate-950">
+                            <!-- Reemplaza src="img/acceso-1.png" por la captura principal de tu sistema de control de acceso -->
+                            <img src="img/acceso-1.jpg" onerror="this.src='https://placehold.co/800x450/0f172a/fbbf24?text=Control+de+Acceso+%26+Pases+en+Escritorio'" alt="Control de Acceso y Visitantes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur border border-slate-700 text-amber-400 text-xs font-semibold">
+                                Software de Escritorio
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Sistema de Control de Entrada y Salida</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Aplicación de escritorio para registro de visitantes, emisión de pases y búsqueda rápida por cédula para asistentes recurrentes (con foto, área de destino y exportación a Excel).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <button onclick="openProjectModal(3)" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-indigo-600 text-white font-semibold text-sm flex items-center justify-center space-x-2 transition-all cursor-pointer">
+                            <i class="fa-regular fa-images"></i>
+                            <span>Ver Galería y Detalles</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VENTANA MODAL DE PROYECTOS (LightBox / Galería) -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity" onclick="closeProjectModalOnOutside(event)">
+        <div class="relative w-full max-w-4xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-950/60">
+                <div class="flex items-center space-x-3">
+                    <span id="modal-category" class="px-2.5 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 text-xs font-semibold">Categoría</span>
+                    <h3 id="modal-title" class="text-lg sm:text-xl font-bold text-white">Título del Proyecto</h3>
+                </div>
+                <button onclick="closeProjectModal()" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-red-500/20 hover:text-red-400 text-slate-400 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div class="p-6 overflow-y-auto space-y-6">
+                <!-- Imagen Principal -->
+                <div class="relative rounded-xl overflow-hidden bg-slate-950 border border-slate-800 h-64 sm:h-96 flex items-center justify-center">
+                    <img id="modal-main-image" src="" alt="Vista previa del proyecto" class="w-full h-full object-contain bg-slate-950 transition-all duration-300">
+                    
+                    <!-- Botones Anterior / Siguiente -->
+                    <button onclick="prevModalImage()" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-950/80 hover:bg-indigo-600 text-white border border-slate-700 flex items-center justify-center transition-all">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextModalImage()" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-950/80 hover:bg-indigo-600 text-white border border-slate-700 flex items-center justify-center transition-all">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <div id="modal-image-caption" class="absolute bottom-3 left-3 right-3 px-4 py-2 rounded-lg bg-slate-950/85 backdrop-blur text-xs text-slate-200 border border-slate-800">
+                        Descripción de la captura
+                    </div>
+                </div>
+
+                <!-- Miniaturas (Thumbnails) -->
+                <div id="modal-thumbnails" class="flex items-center gap-3 overflow-x-auto pb-1">
+                    <!-- Se generan dinámicamente con JS -->
+                </div>
+
+                <!-- Descripción y Tecnologías -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 border-t border-slate-800">
+                    <div class="md:col-span-2 space-y-3">
+                        <h4 class="text-sm font-bold uppercase tracking-wider text-cyan-400">Descripción del Trabajo</h4>
+                        <p id="modal-description" class="text-slate-300 text-sm leading-relaxed">
+                            Descripción detallada del proyecto.
+                        </p>
+                        <div class="p-3.5 rounded-xl bg-emerald-950/30 border border-emerald-800/40">
+                            <p id="modal-result" class="text-xs text-emerald-300 font-medium"></p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-2">Tecnologías Aplicadas</h4>
+                            <div id="modal-techs" class="flex flex-wrap gap-2">
+                                <!-- Badges dinámicos -->
+                            </div>
+                        </div>
+                        <a href="#contacto" onclick="closeProjectModal()" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-semibold text-xs flex items-center justify-center space-x-2 shadow-lg shadow-indigo-600/20 hover:opacity-95 transition-all">
+                            <span>Quiero algo similar para mi negocio</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nuestro Equipo y Contacto Section -->
+    <section id="contacto" class="py-24 bg-darker relative border-t border-slate-900">
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                    Trato Directo con los Fundadores
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    Conoce a los Socios y <span class="text-indigo-400">Hablemos de tu Idea</span>
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Sin vendedores ni intermediarios. Contáctanos directamente por WhatsApp o correo para evaluar cómo podemos optimizar tu negocio o resolver tus requerimientos técnicos.
+                </p>
+            </div>
+
+            <!-- Team / Partners Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Partner 1: Richard -->
+                <div class="rounded-2xl bg-slate-900/90 border border-slate-800 p-8 flex flex-col items-center text-center shadow-xl relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-indigo-500 to-cyan-400"></div>
+                    
+                    <div class="relative w-28 h-28 mb-6">
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 opacity-75 blur-sm group-hover:opacity-100 transition-opacity"></div>
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x300/1e293b/38bdf8?text=Richard'" alt="Richard - Co-Fundador & Desarrollo de Software" class="relative w-28 h-28 rounded-full object-cover border-2 border-slate-800">
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white mb-1">Richard</h3>
+                    <p class="text-cyan-400 text-sm font-medium mb-3">Co-Fundador & Desarrollo de Soluciones</p>
+                    <p class="text-slate-400 text-xs sm:text-sm mb-6 leading-relaxed">
+                        Enfocado en desarrollo de software a medida, automatización de tareas con Python/Node.js y creación de plataformas web funcionales para negocios.
+                    </p>    
+
+                    <div class="flex flex-wrap items-center justify-center gap-3 w-full">
+                        <a href="https://wa.me/584242279400" target="_blank" class="flex-1 min-w-[130px] px-4 py-2.5 rounded-xl bg-emerald-600/20 border border-emerald-600/40 text-emerald-400 hover:bg-emerald-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>+58 424-2279400</span>
+                        </a>
+                        <a href="mailto:gutierrezrichard118@gmail.com" class="w-full px-4 py-2.5 rounded-xl bg-indigo-600/20 border border-indigo-600/40 text-indigo-400 hover:bg-indigo-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
+                            <i class="fa-solid fa-envelope text-sm"></i>
+                            <span>gutierrezrichard118@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Partner 2: Rances -->
+                <div class="rounded-2xl bg-slate-900/90 border border-slate-800 p-8 flex flex-col items-center text-center shadow-xl relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-cyan-400 to-teal-400"></div>
+                    
+                    <div class="relative w-28 h-28 mb-6">
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 to-teal-400 opacity-75 blur-sm group-hover:opacity-100 transition-opacity"></div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x300/1e293b/818cf8?text=Rances'" alt="Rances - Co-Fundador & Soporte Técnico" class="relative w-28 h-28 rounded-full object-cover border-2 border-slate-800">
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white mb-1">Rances</h3>
+                    <p class="text-indigo-400 text-sm font-medium mb-3">Co-Fundador & Soporte Técnico / Sistemas</p>
+                    <p class="text-slate-400 text-xs sm:text-sm mb-6 leading-relaxed">
+                        Especializado en soporte técnico integral, mantenimiento preventivo de equipos, optimización de sistemas y arquitectura de aplicaciones en Java/Web.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center gap-3 w-full">
+                        <a href="https://wa.me/584241878800" target="_blank" class="flex-1 min-w-[130px] px-4 py-2.5 rounded-xl bg-emerald-600/20 border border-emerald-600/40 text-emerald-400 hover:bg-emerald-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>+58 424-1878800</span>
+                        </a>
+                        <a href="mailto:alejandro@techfixsolutions.com" class="w-full px-4 py-2.5 rounded-xl bg-indigo-600/20 border border-indigo-600/40 text-indigo-400 hover:bg-indigo-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
+                            <i class="fa-solid fa-envelope text-sm"></i>
+                            <span>alejandro@techfixsolutions.com</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-slate-900 py-12 text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-sm overflow-hidden">
+                    <img src="img/logo.png" alt="TechFix Logo" class="w-full h-full object-contain bg-slate-950" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <i class="fa-solid fa-code hidden"></i>
+                </div>
+                <span class="text-slate-300 font-semibold text-sm">TechFix Solutions</span>
+            </div>
+            <div>
+                <p>&copy; 2026 TechFix Solutions. Todos los derechos reservados.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#inicio" class="hover:text-cyan-400 transition-colors">Inicio</a>
+                <a href="#soluciones" class="hover:text-cyan-400 transition-colors">Soluciones</a>
+                <a href="#proyectos" class="hover:text-cyan-400 transition-colors">Trabajos</a>
+                <a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Dual Filter State (Category + Technology)
+        let activeCategory = 'all';
+        let activeTech = 'all';
+
+        function setCategoryFilter(category) {
+            activeCategory = category;
+            const buttons = document.querySelectorAll('.cat-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-cat') === category) {
+                    btn.className = 'cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-600 text-white transition-all shadow-lg shadow-indigo-600/20';
+                } else {
+                    btn.className = 'cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white transition-all';
+                }
+            });
+
+            applyFilters();
+        }
+
+        function setTechFilter(tech) {
+            activeTech = tech;
+            const buttons = document.querySelectorAll('.tech-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-tech') === tech) {
+                    btn.className = 'tech-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-cyan-500/20 border border-cyan-500/50 text-cyan-300 transition-all';
+                } else {
+                    btn.className = 'tech-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-all';
+                }
+            });
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const cards = document.querySelectorAll('.service-card');
+            const noResults = document.getElementById('no-results');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                const cardTechs = card.getAttribute('data-tech').split(' ');
+
+                const matchesCat = activeCategory === 'all' || cardCat === activeCategory;
+                const matchesTech = activeTech === 'all' || cardTechs.includes(activeTech);
+
+                if (matchesCat && matchesTech) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        function resetFilters() {
+            setCategoryFilter('all');
+            setTechFilter('all');
+        }
+
+        // ==========================================
+        // DATOS DE TUS 4 TRABAJOS REALIZADOS (MODAL)
+        // Solo guarda tus capturas en la carpeta "img/" con estos nombres (o cambia los nombres aquí)
+        // ==========================================
+        const projectsData = [
+            {
+                title: "Sistema de Gestión de Comedores y Recetas",
+                category: "Escritorio & Inventario",
+                description: "Sistema de escritorio diseñado para comedores y servicios de alimentación. Permite registrar ingredientes en inventario, armar recetas con proporciones exactas y, al seleccionar la cantidad de platos a servir, descuenta automáticamente los insumos consumidos para mantener un control preciso del stock y evitar desperdicios.",
+                result: "Resultado: Control exacto de consumo por servicio, cálculo automático de ingredientes y prevención de faltantes en cocina.",
+                techs: ["Python", "SQLite", "Interfaz de Escritorio", "Exportación Excel"],
+                images: [
+                    {
+                        url: "img/comedor-2.png",
+                        fallback: "https://placehold.co/1000x560/0f172a/38bdf8?text=Captura+1%3A+Panel+Principal+e+Inventario+de+Comedor",
+                        caption: "Control de inventario de alimentos y registro de entradas/salidas."
+                    },
+                    {
+                        url: "img/comedor-3.png",
+                        fallback: "https://placehold.co/1000x560/0f172a/38bdf8?text=Captura+2%3A+Creacion+de+Recetas+y+Calculo+por+Platos",
+                        caption: "Creación de recetas y descuento automático según la cantidad de platos servidos."
+                    },
+                    {
+                        url: "img/comedor-1.png",
+                        fallback: "https://placehold.co/1000x560/0f172a/38bdf8?text=Captura+2%3A+Creacion+de+Recetas+y+Calculo+por+Platos",
+                        caption: "Creación de recetas y descuento automático según la cantidad de platos servidos."
+                    }
+                ]
+            },
+            {
+                title: "Catálogo Interactivo de Perfumes y Delivery",
+                category: "E-commerce & Catálogo Web",
+                description: "Catálogo web optimizado para emprendimiento de perfumería. Muestra disponibilidad y precios en divisas con cálculo automático en bolívares según la tasa del día (Dólar o Euro), filtros rápidos por categoría/precio y una calculadora integrada para que el cliente estime el costo de delivery según su ubicación.",
+                result: "Resultado: Clientes consultan precios actualizados en Bs/Divisas y calculan su envío al instante sin esperar respuesta manual.",
+                techs: ["HTML5 / CSS3", "JavaScript", "Cálculo Tasa USD/EUR", "Calculadora Delivery"],
+                images: [
+                    {
+                        url: "img/perfumes-1.png",
+                        fallback: "https://placehold.co/1000x560/0f172a/818cf8?text=Captura+1%3A+Catalogo+de+Perfumes+con+Tasa+USD%2FEUR",
+                        caption: "Catálogo visual con filtros de búsqueda y conversión automática a bolívares."
+                    },
+                    {
+                        url: "img/perfumes-2.png",
+                        fallback: "https://placehold.co/1000x560/0f172a/818cf8?text=Captura+2%3A+Calculadora+de+Delivery+por+Ubicacion",
+                        caption: "Calculadora interactiva para estimar el costo del delivery según la zona elegida."
+                    },
+                    {
+                        url: "img/perfumes-3.png",
+                        fallback: "https://placehold.co/1000x560/0f172a/818cf8?text=Captura+2%3A+Calculadora+de+Delivery+por+Ubicacion",
+                        caption: "Calculadora interactiva para estimar el costo del delivery según la zona elegida."
+                    }
+                ]
+            },
+            {
+    title: "Optimización de Hardware, Sistema Operativo y Respaldos",
+    category: "Soporte IT & Automatización",
+    description: "Limpieza interna y mantenimiento preventivo de hardware, diagnóstico de componentes, optimización del sistema operativo y scripts automáticos para copias de seguridad y tareas rutinarias.",
+    result: "Resultado: Equipos más estables, menor temperatura/lentitud y respaldo automático de información clave.",
+    techs: ["Hardware IT", "Sistema Operativo", "Automatización"],
+    images: [
+        {
+            url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+            fallback: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+            caption: "Hardware: Revisión, limpieza y mantenimiento preventivo de componentes y circuitos."
+        },
+        {
+            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+            fallback: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+            caption: "Software: Configuración, ajuste de sistema operativo y monitoreo de rendimiento."
+        }
+    ]
+},,
+            {
+                title: "Sistema de Control de Entrada y Salida",
+                category: "Software de Escritorio",
+                description: "Programa de escritorio para controlar el acceso de personas a un ente o establecimiento. Registra nombre, apellido, cédula, fotografía y área de destino para emitir pases de acceso; si la persona ya visitó antes, al buscar su cédula carga sus datos guardados y solo actualiza el lugar al que asiste ese día. Permite exportar todo el historial a Excel.",
+                result: "Resultado: Agilización del ingreso de visitantes recurrentes, trazabilidad por área y reportes listos en Excel.",
+                techs: ["Python", "Base de Datos SQLite", "Captura de Foto", "Exportación Excel"],
+                images: [
+                    {
+                        url: "img/acceso-1.jpg",
+                        fallback: "https://placehold.co/1000x560/0f172a/fbbf24?text=Captura+1%3A+Registro+y+Busqueda+Rapida+por+Cedula",
+                        caption: "Búsqueda rápida por número de cédula, registro con fotografía y asignación de destino."
+                    },
+                    {
+                        url: "img/acceso-2.jpg",
+                        fallback: "https://placehold.co/1000x560/0f172a/fbbf24?text=Captura+2%3A+Control+de+Pases%2C+Salidas+y+Exportacion+Excel",
+                        caption: "Control de entradas/salidas activas y descarga de registros completos en Excel."
+                    },
+                    {
+                        url: "img/acceso-3.jpg",
+                        fallback: "https://placehold.co/1000x560/0f172a/fbbf24?text=Captura+2%3A+Control+de+Pases%2C+Salidas+y+Exportacion+Excel",
+                        caption: "Control de entradas/salidas activas y descarga de registros completos en Excel."
+                    }
+                ]
+            }
+        ];
+
+        let currentProjectIndex = 0;
+        let currentImageIndex = 0;
+
+        function openProjectModal(projectIndex) {
+            currentProjectIndex = projectIndex;
+            currentImageIndex = 0;
+            const project = projectsData[projectIndex];
+
+            document.getElementById('modal-title').textContent = project.title;
+            document.getElementById('modal-category').textContent = project.category;
+            document.getElementById('modal-description').textContent = project.description;
+            document.getElementById('modal-result').innerHTML = `<i class="fa-solid fa-circle-check mr-1.5"></i>${project.result}`;
+
+            // Renderizar badges de tecnologías
+            const techsContainer = document.getElementById('modal-techs');
+            techsContainer.innerHTML = project.techs.map(tech => 
+                `<span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-cyan-300 text-xs font-medium">${tech}</span>`
+            ).join('');
+
+            // Renderizar miniaturas con respaldo automático si falta la imagen local
+            const thumbsContainer = document.getElementById('modal-thumbnails');
+            thumbsContainer.innerHTML = project.images.map((img, idx) => `
+                <button onclick="selectModalImage(${idx})" class="thumb-btn relative w-20 h-14 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${idx === 0 ? 'border-cyan-400 scale-105' : 'border-slate-800 opacity-60 hover:opacity-100'}">
+                    <img src="${img.url}" onerror="this.src='${img.fallback}'" alt="Miniatura ${idx + 1}" class="w-full h-full object-cover">
+                </button>
+            `).join('');
+
+            updateModalImage();
+
+            const modal = document.getElementById('project-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateModalImage() {
+            const project = projectsData[currentProjectIndex];
+            const imgData = project.images[currentImageIndex];
+            const mainImg = document.getElementById('modal-main-image');
+
+            mainImg.onerror = function() {
+                this.onerror = null;
+                this.src = imgData.fallback;
+            };
+            mainImg.src = imgData.url;
+
+            document.getElementById('modal-image-caption').textContent = `(${currentImageIndex + 1}/${project.images.length}) — ${imgData.caption}`;
+
+            const thumbs = document.querySelectorAll('.thumb-btn');
+            thumbs.forEach((thumb, idx) => {
+                if (idx === currentImageIndex) {
+                    thumb.className = 'thumb-btn relative w-20 h-14 rounded-lg overflow-hidden border-2 border-cyan-400 scale-105 transition-all shrink-0';
+                } else {
+                    thumb.className = 'thumb-btn relative w-20 h-14 rounded-lg overflow-hidden border-2 border-slate-800 opacity-60 hover:opacity-100 transition-all shrink-0';
+                }
+            });
+        }
+
+        function selectModalImage(index) {
+            currentImageIndex = index;
+            updateModalImage();
+        }
+
+        function nextModalImage() {
+            const total = projectsData[currentProjectIndex].images.length;
+            currentImageIndex = (currentImageIndex + 1) % total;
+            updateModalImage();
+        }
+
+        function prevModalImage() {
+            const total = projectsData[currentProjectIndex].images.length;
+            currentImageIndex = (currentImageIndex - 1 + total) % total;
+            updateModalImage();
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function closeProjectModalOnOutside(event) {
+            if (event.target.id === 'project-modal') {
+                closeProjectModal();
+            }
+        }
+
+        // Cerrar modal con tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeProjectModal();
+            }
+        });
+    </script>
+</body>
+</html>
