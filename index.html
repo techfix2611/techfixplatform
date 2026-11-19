@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechFix Solutions | Desarrollo de Software & Soporte IT</title>
+    <!-- Favicon de la marca -->
+    <link rel="icon" type="image/jpeg" href="img/logo-isotipo.jpg">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -52,17 +54,17 @@
     <!-- Header / Navbar -->
     <header class="fixed top-0 left-0 right-0 z-40 bg-darker/80 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo de la Marca (Reemplaza img/logo.png con tu archivo de logo) -->
+            <!-- Logo de la Marca en Navbar -->
             <a href="#inicio" class="flex items-center space-x-3 group">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-400 p-0.5 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform overflow-hidden">
-                    <img src="img/logo.png" alt="TechFix Solutions Logo" class="w-full h-full object-contain rounded-[10px] bg-slate-950" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="hidden w-full h-full items-center justify-center text-white font-black text-xl">
-                        <i class="fa-solid fa-code"></i>
+                <div class="w-11 h-11 rounded-xl bg-white p-1 flex items-center justify-center shadow-lg shadow-cyan-500/20 ring-1 ring-cyan-400/40 group-hover:scale-105 transition-transform overflow-hidden">
+                    <img src="img/logo-isotipo.jpg" alt="Isotipo TechFix" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hidden w-full h-full items-center justify-center text-slate-900 font-black text-lg">
+                        {F}
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-xl font-bold tracking-tight text-white">TechFix<span class="text-cyan-400">.</span></span>
-                    <span class="text-xs text-slate-400 font-medium">Software & IT Support</span>
+                    <span class="text-xl font-bold tracking-tight text-white">Tech<span class="text-cyan-400">Fix</span></span>
+                    <span class="text-[11px] text-slate-400 font-medium">Desarrollo &amp; Soporte IT</span>
                 </div>
             </a>
 
@@ -119,7 +121,7 @@
             </h1>
 
             <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-normal">
-                Optimizamos procesos, automatizamos tareas repetitivas y facilitamos el trabajo diario de empresas, negocios y emprendimientos con tecnología moderna y soporte directo.
+                Somos un estudio emergente de desarrollo tecnológico y soporte IT enfocado en optimizar procesos, automatizar tareas y crear soluciones a medida —como sistemas de escritorio, catálogos web, inventarios, chatbots y mantenimiento de equipos— para facilitar el trabajo diario de emprendimientos, negocios y empresas con atención directa.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -204,33 +206,46 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-6 relative">
-                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-20 blur-xl"></div>
-                    <div class="relative rounded-2xl bg-slate-900 border border-slate-800 p-8 shadow-2xl space-y-6">
-                        <div class="flex items-center justify-between pb-6 border-b border-slate-800">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <div class="lg:col-span-6 relative space-y-5">
+                    <!-- Tarjeta de Identidad de Marca -->
+                    <div class="rounded-2xl bg-slate-900 border border-slate-800 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="bg-white rounded-xl px-4 py-3 flex items-center justify-center shrink-0 shadow-md">
+                            <img src="img/logo-horizontal.jpg" alt="Logo TechFix" class="h-12 w-auto object-contain" onerror="this.parentElement.innerHTML='<span class=\'text-slate-900 font-black text-lg px-2\'>TechFix</span>';">
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <p class="text-xs uppercase tracking-wider text-cyan-400 font-semibold">Identidad Visual</p>
+                            <p class="text-sm text-slate-300 mt-0.5">Código estructurado <span class="text-slate-500">{ }</span> y soluciones técnicas precisas para tu negocio.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-20 blur-xl"></div>
+                        <div class="relative rounded-2xl bg-slate-900 border border-slate-800 p-8 shadow-2xl space-y-6">
+                            <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <span class="text-xs text-slate-500 font-mono">optimizacion-negocio.js</span>
                             </div>
-                            <span class="text-xs text-slate-500 font-mono">optimizacion-negocio.js</span>
-                        </div>
 
-                        <div class="font-mono text-xs sm:text-sm text-slate-300 space-y-2">
-                            <p class="text-indigo-400">// Cómo transformamos tu flujo de trabajo</p>
-                            <p><span class="text-cyan-400">const</span> objetivo = <span class="text-amber-300">"Facilitar tu operación diaria"</span>;</p>
-                            <p><span class="text-cyan-400">const</span> tecnologias = [<span class="text-emerald-300">"Python"</span>, <span class="text-emerald-300">"Node.js"</span>, <span class="text-emerald-300">"Java"</span>, <span class="text-emerald-300">"HTML/JS"</span>];</p>
-                            <p><span class="text-cyan-400">const</span> tratoDirecto = <span class="text-purple-400">true</span>;</p>
-                            <br>
-                            <p class="text-slate-500">// Analizando mejoras para tu empresa...</p>
-                            <p class="text-emerald-400">✔ Menos tiempo en tareas manuales</p>
-                            <p class="text-emerald-400">✔ Control claro de ventas e inventario</p>
-                            <p class="text-emerald-400">✔ Equipos y redes funcionando sin fallos</p>
-                        </div>
+                            <div class="font-mono text-xs sm:text-sm text-slate-300 space-y-2">
+                                <p class="text-indigo-400">// Cómo transformamos tu flujo de trabajo</p>
+                                <p><span class="text-cyan-400">const</span> objetivo = <span class="text-amber-300">"Facilitar tu operación diaria"</span>;</p>
+                                <p><span class="text-cyan-400">const</span> tecnologias = [<span class="text-emerald-300">"Python"</span>, <span class="text-emerald-300">"Node.js"</span>, <span class="text-emerald-300">"Java"</span>, <span class="text-emerald-300">"HTML/JS"</span>];</p>
+                                <p><span class="text-cyan-400">const</span> tratoDirecto = <span class="text-purple-400">true</span>;</p>
+                                <br>
+                                <p class="text-slate-500">// Analizando mejoras para tu empresa...</p>
+                                <p class="text-emerald-400">✔ Menos tiempo en tareas manuales</p>
+                                <p class="text-emerald-400">✔ Control claro de ventas e inventario</p>
+                                <p class="text-emerald-400">✔ Equipos y redes funcionando sin fallos</p>
+                            </div>
 
-                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-                            <span>Enfoque: <span class="text-cyan-400 font-semibold">PyMEs & Emprendimientos</span></span>
-                            <span class="font-mono text-indigo-400">100% Personalizado</span>
+                            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                                <span>Enfoque: <span class="text-cyan-400 font-semibold">PyMEs & Emprendimientos</span></span>
+                                <span class="font-mono text-indigo-400">100% Personalizado</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -508,15 +523,14 @@
                 </p>
             </div>
 
-            <!-- Grid de 4 Proyectos (2 columnas en escritorio para que luzcan amplios y ordenados) -->
+            <!-- Grid de 4 Proyectos -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <!-- Proyecto 1: Sistema para Comedores -->
                 <div class="group rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden flex flex-col justify-between card-glow transition-all duration-300">
                     <div>
                         <div class="relative h-56 overflow-hidden bg-slate-950">
-                            <!-- Reemplaza src="img/comedor-1.png" por la captura principal de tu sistema de comedores -->
-                            <img src="img/comedor-2.png" onerror="this.src='https://placehold.co/800x450/0f172a/38bdf8?text=Sistema+de+Comedores+%26+Recetas'" alt="Sistema de Gestión para Comedores" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <img src="img/comedor-1.png" onerror="this.src='https://placehold.co/800x450/0f172a/38bdf8?text=Sistema+de+Comedores+%26+Recetas'" alt="Sistema de Gestión para Comedores" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
                             <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur border border-slate-700 text-cyan-400 text-xs font-semibold">
                                 Escritorio & Inventario
@@ -541,7 +555,6 @@
                 <div class="group rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden flex flex-col justify-between card-glow transition-all duration-300">
                     <div>
                         <div class="relative h-56 overflow-hidden bg-slate-950">
-                            <!-- Reemplaza src="img/perfumes-1.png" por la captura principal de tu catálogo de perfumes -->
                             <img src="img/perfumes-1.png" onerror="this.src='https://placehold.co/800x450/0f172a/818cf8?text=Catalogo+Perfumes+%2B+Calculadora+Delivery'" alt="Catálogo Web de Perfumes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
                             <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur border border-slate-700 text-indigo-400 text-xs font-semibold">
@@ -564,35 +577,34 @@
                 </div>
 
                 <!-- Proyecto 3: Soporte & Automatización -->
-<div class="group rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden flex flex-col justify-between card-glow transition-all duration-300">
-    <div>
-        <div class="relative h-56 overflow-hidden bg-slate-950">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Mantenimiento de hardware y sistema operativo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur border border-slate-700 text-emerald-400 text-xs font-semibold">
-                Soporte IT & Automatización
-            </span>
-        </div>
-        <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">Optimización de Hardware, Sistema Operativo y Respaldos</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                Limpieza y mantenimiento preventivo de hardware, optimización del sistema operativo y automatización de tareas y respaldos para mantener los equipos estables.
-            </p>
-        </div>
-    </div>
-    <div class="px-6 pb-6">
-        <button onclick="openProjectModal(2)" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-indigo-600 text-white font-semibold text-sm flex items-center justify-center space-x-2 transition-all cursor-pointer">
-            <i class="fa-regular fa-images"></i>
-            <span>Ver Galería y Detalles</span>
-        </button>
-    </div>
-</div>
+                <div class="group rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden flex flex-col justify-between card-glow transition-all duration-300">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-slate-950">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Mantenimiento de hardware y sistema operativo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur border border-slate-700 text-emerald-400 text-xs font-semibold">
+                                Soporte IT & Automatización
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Optimización de Hardware, Sistema Operativo y Respaldos</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Limpieza y mantenimiento preventivo de hardware, optimización del sistema operativo y automatización de tareas y respaldos para mantener los equipos estables.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <button onclick="openProjectModal(2)" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-indigo-600 text-white font-semibold text-sm flex items-center justify-center space-x-2 transition-all cursor-pointer">
+                            <i class="fa-regular fa-images"></i>
+                            <span>Ver Galería y Detalles</span>
+                        </button>
+                    </div>
+                </div>
 
                 <!-- Proyecto 4: Control de Acceso y Visitantes -->
                 <div class="group rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden flex flex-col justify-between card-glow transition-all duration-300">
                     <div>
                         <div class="relative h-56 overflow-hidden bg-slate-950">
-                            <!-- Reemplaza src="img/acceso-1.png" por la captura principal de tu sistema de control de acceso -->
                             <img src="img/acceso-1.jpg" onerror="this.src='https://placehold.co/800x450/0f172a/fbbf24?text=Control+de+Acceso+%26+Pases+en+Escritorio'" alt="Control de Acceso y Visitantes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
                             <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur border border-slate-700 text-amber-400 text-xs font-semibold">
@@ -711,21 +723,21 @@
                     
                     <div class="relative w-28 h-28 mb-6">
                         <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 opacity-75 blur-sm group-hover:opacity-100 transition-opacity"></div>
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x300/1e293b/38bdf8?text=Richard'" alt="Richard - Co-Fundador & Desarrollo de Software" class="relative w-28 h-28 rounded-full object-cover border-2 border-slate-800">
+                        <img src="./img/richard.jpg" onerror="this.src='https://placehold.co/300x300/1e293b/38bdf8?text=Richard'" alt="Richard - Co-Fundador & Desarrollo de Software" class="relative w-28 h-28 rounded-full object-cover border-2 border-slate-800">
                     </div>
 
                     <h3 class="text-xl font-bold text-white mb-1">Richard</h3>
                     <p class="text-cyan-400 text-sm font-medium mb-3">Co-Fundador & Desarrollo de Soluciones</p>
                     <p class="text-slate-400 text-xs sm:text-sm mb-6 leading-relaxed">
-                        Enfocado en desarrollo de software a medida, automatización de tareas con Python/Node.js y creación de plataformas web funcionales para negocios.
-                    </p>    
+                        Enfocado en desarrollo de software a medida, aplicaciones de escritorio, automatización de tareas con Python/Node.js, creación de plataformas web con HTML y la implementación de IA en proyectos clave para negocios.
+                    </p>   
 
                     <div class="flex flex-wrap items-center justify-center gap-3 w-full">
                         <a href="https://wa.me/584242279400" target="_blank" class="flex-1 min-w-[130px] px-4 py-2.5 rounded-xl bg-emerald-600/20 border border-emerald-600/40 text-emerald-400 hover:bg-emerald-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
                             <i class="fa-brands fa-whatsapp text-sm"></i>
                             <span>+58 424-2279400</span>
                         </a>
-                        <a href="mailto:gutierrezrichard118@gmail.com" class="w-full px-4 py-2.5 rounded-xl bg-indigo-600/20 border border-indigo-600/40 text-indigo-400 hover:bg-indigo-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gutierrezrichard118@gmail.com" target="_blank" class="w-full px-4 py-2.5 rounded-xl bg-indigo-600/20 border border-indigo-600/40 text-indigo-400 hover:bg-indigo-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
                             <i class="fa-solid fa-envelope text-sm"></i>
                             <span>gutierrezrichard118@gmail.com</span>
                         </a>
@@ -738,24 +750,25 @@
                     
                     <div class="relative w-28 h-28 mb-6">
                         <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 to-teal-400 opacity-75 blur-sm group-hover:opacity-100 transition-opacity"></div>
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x300/1e293b/818cf8?text=Rances'" alt="Rances - Co-Fundador & Soporte Técnico" class="relative w-28 h-28 rounded-full object-cover border-2 border-slate-800">
+                        <img src="./img/rances.jpg" onerror="this.src='https://placehold.co/300x300/1e293b/818cf8?text=Rances'" alt="Rances - Co-Fundador & Soporte Técnico" class="relative w-28 h-28 rounded-full object-cover border-2 border-slate-800">
                     </div>
 
                     <h3 class="text-xl font-bold text-white mb-1">Rances</h3>
-                    <p class="text-indigo-400 text-sm font-medium mb-3">Co-Fundador & Soporte Técnico / Sistemas</p>
-                    <p class="text-slate-400 text-xs sm:text-sm mb-6 leading-relaxed">
-                        Especializado en soporte técnico integral, mantenimiento preventivo de equipos, optimización de sistemas y arquitectura de aplicaciones en Java/Web.
-                    </p>
+<p class="text-indigo-400 text-sm font-medium mb-3">Co-Fundador & Soporte Técnico / Sistemas</p>
+<p class="text-slate-400 text-xs sm:text-sm mb-6 leading-relaxed">
+    Especializado en soporte técnico integral, mantenimiento preventivo de equipos, administración de servidores y Windows Server, sistemas de facturación, optimización de sistemas y arquitectura de aplicaciones en Java/Web.
+</p>
 
-                    <div class="flex flex-wrap items-center justify-center gap-3 w-full">
-                        <a href="https://wa.me/584241878800" target="_blank" class="flex-1 min-w-[130px] px-4 py-2.5 rounded-xl bg-emerald-600/20 border border-emerald-600/40 text-emerald-400 hover:bg-emerald-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
-                            <i class="fa-brands fa-whatsapp text-sm"></i>
-                            <span>+58 424-1878800</span>
-                        </a>
-                        <a href="mailto:alejandro@techfixsolutions.com" class="w-full px-4 py-2.5 rounded-xl bg-indigo-600/20 border border-indigo-600/40 text-indigo-400 hover:bg-indigo-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
-                            <i class="fa-solid fa-envelope text-sm"></i>
-                            <span>alejandro@techfixsolutions.com</span>
-                        </a>
+<div class="flex flex-wrap items-center justify-center gap-3 w-full">
+    <a href="https://wa.me/584241878800" target="_blank" class="flex-1 min-w-[130px] px-4 py-2.5 rounded-xl bg-emerald-600/20 border border-emerald-600/40 text-emerald-400 hover:bg-emerald-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
+        <i class="fa-brands fa-whatsapp text-sm"></i>
+        <span>+58 424-1878800</span>
+    </a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Carvajalrances@gmail.com" target="_blank" class="w-full px-4 py-2.5 rounded-xl bg-indigo-600/20 border border-indigo-600/40 text-indigo-400 hover:bg-indigo-600 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all">
+        <i class="fa-solid fa-envelope text-sm"></i>
+        <span>Carvajalrances@gmail.com</span>
+    </a>
+</div>
                     </div>
                 </div>
 
@@ -767,9 +780,9 @@
     <footer class="bg-dark border-t border-slate-900 py-12 text-slate-500 text-xs">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-sm overflow-hidden">
-                    <img src="img/logo.png" alt="TechFix Logo" class="w-full h-full object-contain bg-slate-950" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-                    <i class="fa-solid fa-code hidden"></i>
+                <div class="w-9 h-9 rounded-lg bg-white p-1 flex items-center justify-center overflow-hidden">
+                    <img src="img/logo-isotipo.jpg" alt="TechFix Logo" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <i class="fa-solid fa-code text-slate-900 hidden"></i>
                 </div>
                 <span class="text-slate-300 font-semibold text-sm">TechFix Solutions</span>
             </div>
@@ -869,7 +882,6 @@
 
         // ==========================================
         // DATOS DE TUS 4 TRABAJOS REALIZADOS (MODAL)
-        // Solo guarda tus capturas en la carpeta "img/" con estos nombres (o cambia los nombres aquí)
         // ==========================================
         const projectsData = [
             {
@@ -892,7 +904,7 @@
                     {
                         url: "img/comedor-1.png",
                         fallback: "https://placehold.co/1000x560/0f172a/38bdf8?text=Captura+2%3A+Creacion+de+Recetas+y+Calculo+por+Platos",
-                        caption: "Creación de recetas y descuento automático según la cantidad de platos servidos."
+                        caption: "Historial con los datos para llevar un seguimiento a lo que alimento que se consumo, cuando y quien lo aprobo"
                     }
                 ]
             },
@@ -911,7 +923,7 @@
                     {
                         url: "img/perfumes-2.png",
                         fallback: "https://placehold.co/1000x560/0f172a/818cf8?text=Captura+2%3A+Calculadora+de+Delivery+por+Ubicacion",
-                        caption: "Calculadora interactiva para estimar el costo del delivery según la zona elegida."
+                        caption: "Filtros de busquedas para dividir poder buscar por genero, marca y del mayor precio al menor precio o viceversa"
                     },
                     {
                         url: "img/perfumes-3.png",
@@ -921,24 +933,24 @@
                 ]
             },
             {
-    title: "Optimización de Hardware, Sistema Operativo y Respaldos",
-    category: "Soporte IT & Automatización",
-    description: "Limpieza interna y mantenimiento preventivo de hardware, diagnóstico de componentes, optimización del sistema operativo y scripts automáticos para copias de seguridad y tareas rutinarias.",
-    result: "Resultado: Equipos más estables, menor temperatura/lentitud y respaldo automático de información clave.",
-    techs: ["Hardware IT", "Sistema Operativo", "Automatización"],
-    images: [
-        {
-            url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
-            fallback: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
-            caption: "Hardware: Revisión, limpieza y mantenimiento preventivo de componentes y circuitos."
-        },
-        {
-            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
-            fallback: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
-            caption: "Software: Configuración, ajuste de sistema operativo y monitoreo de rendimiento."
-        }
-    ]
-},,
+                title: "Optimización de Hardware, Sistema Operativo y Respaldos",
+                category: "Soporte IT & Automatización",
+                description: "Limpieza interna y mantenimiento preventivo de hardware, diagnóstico de componentes, optimización del sistema operativo y scripts automáticos para copias de seguridad y tareas rutinarias.",
+                result: "Resultado: Equipos más estables, menor temperatura/lentitud y respaldo automático de información clave.",
+                techs: ["Hardware IT", "Sistema Operativo", "Automatización"],
+                images: [
+                    {
+                        url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+                        fallback: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+                        caption: "Hardware: Revisión, limpieza y mantenimiento preventivo de componentes y circuitos."
+                    },
+                    {
+                        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+                        fallback: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+                        caption: "Software: Configuración, ajuste de sistema operativo y monitoreo de rendimiento."
+                    }
+                ]
+            },
             {
                 title: "Sistema de Control de Entrada y Salida",
                 category: "Software de Escritorio",
@@ -949,12 +961,12 @@
                     {
                         url: "img/acceso-1.jpg",
                         fallback: "https://placehold.co/1000x560/0f172a/fbbf24?text=Captura+1%3A+Registro+y+Busqueda+Rapida+por+Cedula",
-                        caption: "Búsqueda rápida por número de cédula, registro con fotografía y asignación de destino."
+                        caption: "Registro para visitantes nuevos o trabajadores que acuden al plantel"
                     },
                     {
                         url: "img/acceso-2.jpg",
                         fallback: "https://placehold.co/1000x560/0f172a/fbbf24?text=Captura+2%3A+Control+de+Pases%2C+Salidas+y+Exportacion+Excel",
-                        caption: "Control de entradas/salidas activas y descarga de registros completos en Excel."
+                        caption: "Búsqueda rápida por número de cédula, registro con fotografía y asignación de destino."
                     },
                     {
                         url: "img/acceso-3.jpg",
@@ -978,13 +990,11 @@
             document.getElementById('modal-description').textContent = project.description;
             document.getElementById('modal-result').innerHTML = `<i class="fa-solid fa-circle-check mr-1.5"></i>${project.result}`;
 
-            // Renderizar badges de tecnologías
             const techsContainer = document.getElementById('modal-techs');
             techsContainer.innerHTML = project.techs.map(tech => 
                 `<span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-cyan-300 text-xs font-medium">${tech}</span>`
             ).join('');
 
-            // Renderizar miniaturas con respaldo automático si falta la imagen local
             const thumbsContainer = document.getElementById('modal-thumbnails');
             thumbsContainer.innerHTML = project.images.map((img, idx) => `
                 <button onclick="selectModalImage(${idx})" class="thumb-btn relative w-20 h-14 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${idx === 0 ? 'border-cyan-400 scale-105' : 'border-slate-800 opacity-60 hover:opacity-100'}">
@@ -1053,7 +1063,6 @@
             }
         }
 
-        // Cerrar modal con tecla Escape
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeProjectModal();
